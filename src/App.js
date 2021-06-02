@@ -39,7 +39,7 @@ class App extends React.Component {
           return{
             ...todo, 
             completed: !todo.completed,
-            
+
           }
         } else{
           return todo;
@@ -60,6 +60,7 @@ class App extends React.Component {
         <h2>Welcome to your Todo App!</h2>
         <TodoList todos={this.state.todos} toggleCompleted={this.toggleCompleted}/>
         <TodoForm addItem={this.addItem}/>
+        
       
         <button onClick={this.clearComponent}>Clear completed</button>
       </div>
