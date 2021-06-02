@@ -39,6 +39,7 @@ class App extends React.Component {
           return{
             ...todo, 
             completed: !todo.completed,
+            
           }
         } else{
           return todo;
