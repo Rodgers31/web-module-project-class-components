@@ -9,20 +9,22 @@ export default class TodoForm extends Component {
 	}
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.addItem(this.state.input);
+		this.props.addTodo(this.state.input);
 	};
 
-	handleClick = (e) => {
+	handleChange = (e) => {
 		this.setState({
 			input: e.target.value,
 		});
 	};
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<input type='text' />
-				<button onClick={this.handleClick}>Add</button>
-			</form>
+			<div id='form-st'>
+				<form onSubmit={this.handleSubmit}>
+					<input onChange={this.handleChange} type='text' name='item' />
+					<button>Add</button>
+				</form>
+			</div>
 		);
 	}
 }
